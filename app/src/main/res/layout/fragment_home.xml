@@ -1,21 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/transparent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".HomeFragment">
 
     <com.google.android.material.tabs.TabLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/home_tab_layout">
+        android:id="@+id/home_tab_layout"
+        app:tabTextAppearance="@style/tabBarItem"
+        app:tabIndicatorColor="@color/orange"
+        app:tabIndicatorFullWidth="false"
+        app:tabMode="fixed"
+        app:tabTextColor="@color/secondaryText"
+        app:tabSelectedTextColor="@color/primaryText"
+        app:tabBackground="@android:color/transparent"
+        app:tabMaxWidth="0dp"
+        app:tabPaddingStart="32dp"
+        app:tabPaddingEnd="32dp"
+        app:tabGravity="start">
 
     </com.google.android.material.tabs.TabLayout>
     <androidx.viewpager.widget.ViewPager
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/home_view_pager">
 
     </androidx.viewpager.widget.ViewPager>
 
-</FrameLayout>
+</LinearLayout>

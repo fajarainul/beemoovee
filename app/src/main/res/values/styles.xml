@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="customfontstyle" parent="@android:style/TextAppearance.Small">
-        <item name="android:fontFamily">@font/itc_avant_garde_std_bk</item>
+    <style name="tabBarItem" parent="@android:style/TextAppearance.Small">
+        <item name="android:fontFamily">@font/avantgardefont</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
     <style name="roundedCorners" parent="">
