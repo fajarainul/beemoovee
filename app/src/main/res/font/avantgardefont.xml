@@ -3,8 +3,8 @@
     <font
         android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/ITCAvantGardeStdBk" />
+        android:font="@font/itc_avant_garde_std_bk" />
     <font
-        android:fontWeight="400"
-        android:font="@font/ITCAvantGardeStdBold" />
+        android:fontWeight="700"
+        android:font="@font/itc_avant_garde_std_bold" />
 </font-family>
