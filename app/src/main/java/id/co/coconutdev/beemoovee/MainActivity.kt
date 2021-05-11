@@ -2,6 +2,8 @@ package id.co.coconutdev.beemoovee
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.util.Log.DEBUG
 import androidx.fragment.app.Fragment
 import id.co.coconutdev.beemoovee.databinding.ActivityMainBinding
 
@@ -15,14 +17,16 @@ class MainActivity : AppCompatActivity() {
 
         val homeFragment=HomeFragment()
         val favoriteFragment=FavoriteFragment()
+        val profileFragment=ProfileFragment()
 
         setCurrentFragment(homeFragment)
 
         activityMainBinding.bottomNavigation.setOnNavigationItemSelectedListener {
+            Log.d("id", it.itemId.toString())
             when(it.itemId){
-                R.id.home->setCurrentFragment(homeFragment)
+                R.id.menu_home->setCurrentFragment(homeFragment)
                 R.id.menu_favorite->setCurrentFragment(favoriteFragment)
-
+                R.id.menu_profile->setCurrentFragment(favoriteFragment)
             }
             true
         }
@@ -31,7 +35,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setCurrentFragment(fragment: Fragment)=
         supportFragmentManager.beginTransaction().apply {
-            replace(R.id.framelayout,fragment)
+            replace(activityMainBinding.framelayout.id,fragment)
             commit()
         }
 }
