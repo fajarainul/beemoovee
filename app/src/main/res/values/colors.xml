@@ -10,4 +10,5 @@
     <color name="orange">#FFFFBC03</color>
     <color name="secondaryText">#FFACADAD</color>
     <color name="primaryText">#FF303133</color>
+    <color name="whiteSmoke">#FFf5f5f5</color>
 </resources>
