@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
             when(it.itemId){
                 R.id.menu_home->setCurrentFragment(homeFragment)
                 R.id.menu_favorite->setCurrentFragment(favoriteFragment)
-                R.id.menu_profile->setCurrentFragment(favoriteFragment)
+                R.id.menu_profile->setCurrentFragment(profileFragment)
             }
             true
         }
