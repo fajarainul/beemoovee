@@ -1,11 +1,13 @@
 package id.co.coconutdev.beemoovee.ui.movies
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import id.co.coconutdev.beemoovee.data.Movie
 import id.co.coconutdev.beemoovee.databinding.ItemMovieBinding
+import id.co.coconutdev.beemoovee.ui.detail.DetailMovieActivity
 
 class MovieAdapter: RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
     private var listMovies = ArrayList<Movie>()
@@ -36,6 +38,11 @@ class MovieAdapter: RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
                 titleMovie.text = movie.title
                 releaseDateMovie.text = movie.releaseDate
                 ratingMovie.text = movie.rating.toString()
+
+                itemView.setOnClickListener {
+                    val intent = Intent(itemView.context, DetailMovieActivity::class.java)
+                    itemView.context.startActivity(intent)
+                }
 
                 val imageRes = itemView.context.resources.getIdentifier(movie.imageUrl, "drawable", itemView.context.packageName)
                 Glide.with(itemView.context)
