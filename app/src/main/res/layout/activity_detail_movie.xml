@@ -49,7 +49,7 @@
             android:padding="16dp">
 
             <TextView
-                android:id="@+id/title_movie"
+                android:id="@+id/detail_title_movie"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
@@ -67,7 +67,7 @@
                 android:id="@+id/detail_rating_movie"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
@@ -86,7 +86,7 @@
                 android:textSize="12sp"
                 android:textColor="@color/secondaryText"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/title_movie"
+                app:layout_constraintTop_toBottomOf="@id/detail_title_movie"
                 tools:text="12 Mei 2021"/>
 
             <TextView

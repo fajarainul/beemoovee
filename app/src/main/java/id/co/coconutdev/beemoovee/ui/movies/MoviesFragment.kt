@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import id.co.coconutdev.beemoovee.databinding.FragmentMoviesBinding
 import id.co.coconutdev.beemoovee.utils.DummyData
@@ -21,9 +23,10 @@ class MoviesFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         if(activity != null){
-            val movies = DummyData.generateDummyMovies()
-            val movieAdapter = MovieAdapter();
+            val viewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory())[MovieViewModel::class.java]
+            val movies = viewModel.getMovies()
 
+            val movieAdapter = MovieAdapter();
             movieAdapter.setMovies(movies)
             with(fragmentMovieBinding.recyclerviewMovies){
                 layoutManager = LinearLayoutManager(context)
