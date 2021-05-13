@@ -1,11 +1,12 @@
 package id.co.coconutdev.beemoovee
 
 import android.content.Context
-import android.util.Log
 import androidx.annotation.StringRes
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
+import id.co.coconutdev.beemoovee.ui.movies.MoviesFragment
+import id.co.coconutdev.beemoovee.ui.tvshows.TvFragment
 
 class SectionsPagerAdapter(private val mContext: Context, fm: FragmentManager) : FragmentPagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
 
