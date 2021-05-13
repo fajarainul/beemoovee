@@ -2,6 +2,7 @@ package id.co.coconutdev.beemoovee.ui.detail
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
@@ -21,9 +22,6 @@ class DetailMovieActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         detailMovieBinding = ActivityDetailMovieBinding.inflate(layoutInflater)
         setContentView(detailMovieBinding.root)
-
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setDisplayShowHomeEnabled(true)
 
         val viewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory())[DetailMovieViewHolder::class.java]
         val extras = intent.extras
