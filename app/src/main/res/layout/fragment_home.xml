@@ -17,7 +17,7 @@
         app:tabMode="fixed"
         app:tabTextColor="@color/secondaryText"
         app:tabSelectedTextColor="@color/primaryText"
-        app:tabBackground="@android:color/transparent"
+        app:tabBackground="@color/whiteSmoke"
         app:tabMaxWidth="0dp"
         app:tabPaddingStart="16dp"
         app:tabPaddingEnd="16dp"

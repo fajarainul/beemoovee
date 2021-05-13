@@ -19,6 +19,8 @@
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowTranslucentStatus">true</item>
         <item name="android:windowTranslucentNavigation">true</item>
+
+        <item name="android:actionBarTabStyle">@style/Theme.ActionBarTab</item>
     </style>
 
     <style name="Theme.BeeMooVee.NoActionBar">
@@ -29,4 +31,10 @@
     <style name="Theme.BeeMooVee.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.BeeMooVee.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="Theme.ActionBarTab" parent="@style/Widget.AppCompat.ActionBar.TabView">
+        <item name="android:background">@color/whiteSmoke</item>
+
+    </style>
+
 </resources>
