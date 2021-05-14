@@ -1,7 +1,6 @@
 package id.co.coconutdev.beemoovee.ui.main
 
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import id.co.coconutdev.beemoovee.R
@@ -25,7 +24,6 @@ class MainActivity : AppCompatActivity() {
         setCurrentFragment(homeFragment)
 
         activityMainBinding.bottomNavigation.setOnNavigationItemSelectedListener {
-            Log.d("id", it.itemId.toString())
             when(it.itemId){
                 R.id.menu_home ->setCurrentFragment(homeFragment)
                 R.id.menu_favorite ->setCurrentFragment(favoriteFragment)
@@ -38,7 +36,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setCurrentFragment(fragment: Fragment)=
         supportFragmentManager.beginTransaction().apply {
-            replace(activityMainBinding.framelayout.id,fragment)
+            replace(R.id.framelayout,fragment)
             commit()
         }
 }
