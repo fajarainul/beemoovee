@@ -10,7 +10,7 @@
         android:id="@+id/image_construction"
         android:layout_width="160dp"
         android:layout_height="160dp"
-        android:src="@drawable/poster_alita"
+        android:src="@drawable/ic_construction"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
