@@ -24,12 +24,21 @@ class MainActivityTest{
     @Test
     fun loadMovies(){
         onView(withId(R.id.recyclerview_movies)).check(matches(isDisplayed()))
-        onView(withId(R.id.recyclerview_movies)).perform(RecyclerViewActions.scrollToPosition<RecyclerView.ViewHolder>(movies.size))
+        onView(withId(R.id.recyclerview_movies)).perform(
+            RecyclerViewActions.scrollToPosition<RecyclerView.ViewHolder>(
+                movies.size
+            )
+        )
     }
 
     @Test
     fun loadDetailMovie() {
-        onView(withId(R.id.recyclerview_movies)).perform(RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(0, click()))
+        onView(withId(R.id.recyclerview_movies)).perform(
+            RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(
+                0,
+                click()
+            )
+        )
 
         onView(withId(R.id.detail_title_movie)).check(matches(isDisplayed()))
         onView(withId(R.id.detail_title_movie)).check(matches(withText(movies[0].title)))
@@ -50,13 +59,22 @@ class MainActivityTest{
     fun loadTvShows() {
         onView(withText("TV Series")).perform(click())
         onView(withId(R.id.recyclerview_tvshows)).check(matches(isDisplayed()))
-        onView(withId(R.id.recyclerview_tvshows)).perform(RecyclerViewActions.scrollToPosition<RecyclerView.ViewHolder>(tvShows.size))
+        onView(withId(R.id.recyclerview_tvshows)).perform(
+            RecyclerViewActions.scrollToPosition<RecyclerView.ViewHolder>(
+                tvShows.size
+            )
+        )
     }
 
     @Test
     fun loadDetailTvShow() {
         onView(withText("TV Series")).perform(click())
-        onView(withId(R.id.recyclerview_tvshows)).perform(RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(0, click()))
+        onView(withId(R.id.recyclerview_tvshows)).perform(
+            RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(
+                0,
+                click()
+            )
+        )
 
         onView(withId(R.id.detail_title_tv)).check(matches(isDisplayed()))
         onView(withId(R.id.detail_title_tv)).check(matches(withText(tvShows[0].title)))
@@ -71,5 +89,17 @@ class MainActivityTest{
         onView(withId(R.id.detail_description)).check(matches(withText(tvShows[0].description)))
 
         onView(withId(R.id.bg_image_view)).check(matches(isDisplayed()))
+    }
+
+    @Test
+    fun clickMenuFavorite() {
+        onView(withId(R.id.menu_favorite)).perform(click()).check(matches(isDisplayed()))
+        onView(withId(R.id.image_construction)).check(matches(isDisplayed()))
+    }
+
+    @Test
+    fun clickMenuProfile() {
+        onView(withId(R.id.menu_profile)).perform(click()).check(matches(isDisplayed()))
+        onView(withId(R.id.image_construction)).check(matches(isDisplayed()))
     }
 }
