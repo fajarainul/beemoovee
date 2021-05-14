@@ -5,7 +5,7 @@ import id.co.coconutdev.beemoovee.data.Movie
 import id.co.coconutdev.beemoovee.utils.DummyData
 
 
-class DetailMovieViewHolder:ViewModel() {
+class DetailMovieViewModel:ViewModel() {
 
     private lateinit var id:String
 

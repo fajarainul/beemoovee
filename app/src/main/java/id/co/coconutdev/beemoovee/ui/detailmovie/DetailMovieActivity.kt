@@ -21,7 +21,7 @@ class DetailMovieActivity : AppCompatActivity() {
         detailMovieBinding = ActivityDetailMovieBinding.inflate(layoutInflater)
         setContentView(detailMovieBinding.root)
 
-        val viewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory())[DetailMovieViewHolder::class.java]
+        val viewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory())[DetailMovieViewModel::class.java]
         val extras = intent.extras
         if (extras != null) {
             val id = extras.getString(EXTRA_MOVIE)

@@ -21,7 +21,7 @@ class DetailTvActivity : AppCompatActivity() {
         detailTvBinding = ActivityDetailTvBinding.inflate(layoutInflater)
         setContentView(detailTvBinding.root)
 
-        val viewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory())[DetailTvShowViewHolder::class.java]
+        val viewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory())[DetailTvShowViewModel::class.java]
         val extras = intent.extras
         if (extras != null) {
             val id = extras.getString(EXTRA_TV)

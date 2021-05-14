@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 import id.co.coconutdev.beemoovee.data.TvShow
 import id.co.coconutdev.beemoovee.utils.DummyData
 
-class DetailTvShowViewHolder:ViewModel() {
+class DetailTvShowViewModel:ViewModel() {
     private lateinit var id:String
 
     fun setSelectedId(selectedId:String){
