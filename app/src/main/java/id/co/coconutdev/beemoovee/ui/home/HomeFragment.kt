@@ -28,7 +28,6 @@ class HomeFragment : Fragment() {
             fragmentHomeBinding.homeTabLayout.setupWithViewPager(fragmentHomeBinding.homeViewPager)
 
             fragmentHomeBinding.homeTabLayout.isTabIndicatorFullWidth = false
-//            fragmentHomeBinding.homeTabLayout.
         }
     }
 

@@ -1,4 +1,4 @@
-package id.co.coconutdev.beemoovee.ui.detail
+package id.co.coconutdev.beemoovee.ui.detailmovie
 
 import androidx.lifecycle.ViewModel
 import id.co.coconutdev.beemoovee.data.Movie

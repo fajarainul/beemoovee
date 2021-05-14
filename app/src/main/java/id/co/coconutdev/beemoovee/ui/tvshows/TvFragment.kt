@@ -5,18 +5,31 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import id.co.coconutdev.beemoovee.R
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import id.co.coconutdev.beemoovee.databinding.FragmentTvBinding
 
 class TvFragment : Fragment() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    private lateinit var fragmentTvBinding: FragmentTvBinding
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        fragmentTvBinding = FragmentTvBinding.inflate(inflater, container, false);
+        return fragmentTvBinding.root;
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tv, container, false)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        if(activity != null){
+            val viewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory())[TvShowViewModel::class.java]
+            val tvShows = viewModel.getTvShows()
+
+            val tvAdapter = TVShowAdapter();
+            tvAdapter.setTVShow(tvShows)
+            with(fragmentTvBinding.recyclerviewTvshows){
+                layoutManager = LinearLayoutManager(context)
+                setHasFixedSize(true)
+                adapter = tvAdapter
+            }
+        }
     }
 }

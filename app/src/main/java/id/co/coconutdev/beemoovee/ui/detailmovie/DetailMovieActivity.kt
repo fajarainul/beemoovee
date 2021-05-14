@@ -1,12 +1,10 @@
-package id.co.coconutdev.beemoovee.ui.detail
+package id.co.coconutdev.beemoovee.ui.detailmovie
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import id.co.coconutdev.beemoovee.R
 import id.co.coconutdev.beemoovee.data.Movie
 import id.co.coconutdev.beemoovee.databinding.ActivityDetailMovieBinding
 import jp.wasabeef.glide.transformations.BlurTransformation

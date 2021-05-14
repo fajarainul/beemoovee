@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import id.co.coconutdev.beemoovee.data.Movie
 import id.co.coconutdev.beemoovee.databinding.ItemMovieBinding
-import id.co.coconutdev.beemoovee.ui.detail.DetailMovieActivity
+import id.co.coconutdev.beemoovee.ui.detailmovie.DetailMovieActivity
 
 class MovieAdapter: RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
     private var listMovies = ArrayList<Movie>()
