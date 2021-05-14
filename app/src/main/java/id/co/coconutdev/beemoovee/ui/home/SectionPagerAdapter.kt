@@ -1,7 +1,6 @@
 package id.co.coconutdev.beemoovee
 
 import android.content.Context
-import android.util.Log
 import androidx.annotation.StringRes
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
